@@ -8,7 +8,7 @@ Kaa is a node.js/Titanium library which make Titanium and node.js share some cod
 
 ### 2. create folder call 'Share' and put models you want to share in it, for example: Share/models.js
 
-```
+```javascript
 var Form = require("Kaa/Form");
 
 exports.loginForm = new Form({
