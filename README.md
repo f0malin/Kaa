@@ -2,7 +2,14 @@
 
 Kaa is a node.js/Titanium library which make Titanium and node.js share some code and work together easily. 
 
-It is inspired by the [meteorjs](http://www.meteor.com/) project. There are many codes need to be shared on both client side and server side. For example, you need to validate the form input at the client side immediately. But that is not safe enough. You need to validate the data from the server side again. Why should we write the codes twice. Just share your models and validation code on both side. 
+Kaa is inspired by the [meteorjs](http://www.meteor.com/) project. There are many codes need to be shared on both client side and server side. For example, you need to validate the form input at the client side immediately. But that is not safe enough. You need to validate the data from the server side again. Why should we write the codes twice. Just share your models and validation code on both side. 
+
+## Features
+
+* Form validation
+* Form submition through HTTP API
+* common API call
+* common DB functions
 
 ## How to use?
 
@@ -41,4 +48,4 @@ ln -s <your_nodejs_project_root>/node_modules/Share .
 ```
 
 5.do validation and find errors on both side
- 
+
