@@ -8,7 +8,8 @@ Kaa is a node.js/Titanium library which make Titanium and node.js share some cod
 
 ### 2. create folder call 'Share' and put models you want to share in it, for example: Share/models.js
 
-``var Form = require("Kaa/Form");
+```
+var Form = require("Kaa/Form");
 
 exports.loginForm = new Form({
 	url: "/users/login",
@@ -16,6 +17,7 @@ exports.loginForm = new Form({
 		{name: "user", type: "text", "validates": ["required"], label: "用户名"},
 		{name: "pass", type: "password", "validates": [["required", "密码也得填啊"]], label: "密码"},
 	],
-});``
+});
+```
 
 
