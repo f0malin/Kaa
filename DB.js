@@ -28,7 +28,7 @@ exports.find = function(sql, params, callback) {
             callback(rows);
         }
     });
-}
+};
 
 exports.uid = function() {
     return uid(24);
