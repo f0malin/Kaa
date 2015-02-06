@@ -42,6 +42,8 @@ exports.go = function(path, data, success_callback, fail_callback) {
 		},
 		timeout: 30000,
 	});
-	xhr.open("POST", exports.baseURL + path + "?r=" + new Date().getTime());
+	var url = exports.baseURL + path + "?r=" + new Date().getTime();
+    console.log("requesting: " + url);
+    xhr.open("POST", url);
 	xhr.send(data);
 };

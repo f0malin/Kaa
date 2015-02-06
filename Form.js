@@ -26,7 +26,7 @@ Form.prototype.setFieldControl = function(name, control) {
 Form.prototype.setValueFromReq = function(req) {
 	for (var i=0;i<this.meta.fields.length;i++) {
 		var f = this.meta.fields[i];
-		f.control = new FakedControl(req.param(f.name));
+		f.control = new FakedControl(req.body[f.name]);
 	}
 };
 

@@ -1,8 +1,10 @@
 {
   "name": "Kaa",
   "version": "0.0.1",
+  "private": true,
   "dependencies": {
     "mysql": "~2.5.4",
-    "uid-safe": "~1.0.2"
+    "uid-safe": "~1.0.2",
+    "mongodb": "~1.4.30"
   }
 }
