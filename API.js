@@ -1,6 +1,11 @@
 
 exports.go = function(path, data, success_callback, fail_callback) {
 	console.log("calling api");
+	
+	var apikey = Ti.App.Properties.getString("apikey");
+	if (apikey) {
+	    data.apikey = apikey;
+	}
 	console.log(data);
 	var xhr = Ti.Network.createHTTPClient({
 		onload: function(e) {
