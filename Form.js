@@ -32,18 +32,15 @@ Form.prototype.setValueFromReq = function(req) {
 
 Form.prototype.checkError = function(f) {
 	if (f.validates) {
-		console.log("validating " + f.name);
 		for (var i=0;i<f.validates.length;i++) {
 			var rule = f.validates[i];
 			if (!(rule instanceof Array)) {
 				rule = [rule];
 			}
-			console.log(rule);
 			var rule_name = rule[0];
 			var rule_msg = rule[1];
 			var value = f.control.getValue();
 			if (rule_name == "required") {
-				console.log("checking required");
 				if (value == null || value == undefined || value == "") {
 					if (rule_msg) {
 						f.error = rule_msg;
@@ -69,7 +66,6 @@ Form.prototype.cleanErrors = function() {
 
 Form.prototype.getErrors = function() {
 	var errors = [];
-	console.log("form error " + this.errors);
 	if (this.errors) {
 		for (var i=0;i<this.errors.length;i++) {
 			errors.push(this.errors[i]);
@@ -108,7 +104,6 @@ Form.prototype.validate = function() {
 
 Form.prototype.submit = function(success_callback, fail_callback) {
 	var form = this;
-	console.log("form submitting");
 	
 	//form.cleanErrors();
 	form.validate();
@@ -116,7 +111,7 @@ Form.prototype.submit = function(success_callback, fail_callback) {
 		if (fail_callback) {
 			fail_callback(this);
 		}
-		return;	
+		return;
 	}
 	
 	api.go(this.meta.url, this.getData(), function(o) {
